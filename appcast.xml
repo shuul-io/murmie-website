@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Murmie</title>
+        <item>
+            <title>1.0.0</title>
+            <pubDate>Thu, 12 Nov 2026 12:01:00 +0530</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## Murmie 1.0.0
+
+The first public release of Murmie, private voice dictation for your Mac.
+
+- Double-tap Right ⌘, speak, tap Right ⌘ again, and your words are typed at the cursor. Esc cancels. Push-to-talk on Right ⌥ is optional.
+- Speech is turned into text on your Mac with NVIDIA Parakeet, Google Gemma, WhisperKit or Apple's speech engine.
+- Models download only when you choose them in setup or Settings.
+- Optional AI correction and Ask AI, off by default. Use on-device Gemma, Apple Intelligence, or your own cloud API key.
+- Murmie checks for updates about once a day; you can turn this off in Settings › About.
+
+Requires an Apple silicon Mac running macOS 26 or later.
+]]></description>
+            <enclosure url="https://github.com/shuul-io/murmie-releases/releases/download/v1.0.0/Murmie.zip" length="73687849" type="application/octet-stream" sparkle:edSignature="du8/MqismKy44IrjghX0HIvMt0vK/OXE+HtQwHaFihamZUX9k2WeJHt6FR6+cpBfMY28fr1rEbaFKs3bytF6Cg=="/>
+        </item>
+    </channel>
+</rss>

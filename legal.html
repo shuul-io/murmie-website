@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms, Privacy and Cookies · Murmie</title>
+    <meta
+      name="description"
+      content="Murmie's terms of use, privacy policy and cookie policy for the Murmie Mac app and murmie.com."
+    />
+    <link rel="canonical" href="https://murmie.com/legal.html" />
+    <meta name="theme-color" content="#EFEFED" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0B0B0E" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script>
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem('murmie-theme');
+        } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        var color = theme === 'dark' ? '#0B0B0E' : '#EFEFED';
+        var metas = document.querySelectorAll('meta[name="theme-color"]');
+        for (var i = 0; i < metas.length; i++) metas[i].setAttribute('content', color);
+      })();
+    </script>
+
+    <link rel="preload" href="/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/poppins-500-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <script type="module" crossorigin src="/assets/main-qaEdLv9h.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-CM0oKVHZ.css">
+  </head>
+  <body>
+    <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+      <symbol id="i-sun" viewBox="0 0 16 16">
+        <circle cx="8" cy="8" r="2.75" />
+        <path
+          d="M8 1.5v1.25M8 13.25v1.25M1.5 8h1.25M13.25 8h1.25M3.4 3.4l.9.9M11.7 11.7l.9.9M12.6 3.4l-.9.9M4.3 11.7l-.9.9"
+        />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 16 16">
+        <path d="M13.5 9.25A5.75 5.75 0 0 1 6.75 2.5a5.75 5.75 0 1 0 6.75 6.75Z" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <button
+        class="btn btn-ghost theme-toggle"
+        type="button"
+        id="theme-toggle"
+        aria-label="Switch to dark theme"
+      >
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon" /></svg>
+      </button>
+    </header>
+
+    <div class="legal-layout">
+      <nav class="legal-nav" aria-label="On this page">
+        <a href="#summary">Summary</a>
+        <a href="#terms">Terms of Use</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#cookies">Cookies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <main class="legal" id="top">
+        <a class="legal-back" href="/">← Back to Murmie</a>
+        <h1>Terms, Privacy and Cookies</h1>
+        <p class="legal-meta">Last updated <time datetime="2026-11-12">12 November 2026</time></p>
+
+        <section id="summary">
+          <h2>Summary</h2>
+          <ul>
+            <li>Murmie is free. There are no accounts, ads or subscriptions.</li>
+            <li>Speech is turned into text on your Mac. We run no servers and receive none of your audio or text.</li>
+            <li>The app has no analytics, tracking or crash reporting.</li>
+            <li>
+              Apart from model downloads, update checks and feedback you choose to send, your data leaves your Mac only if you connect a cloud AI service, and only for the
+              features that use it.
+            </li>
+            <li>This website uses Microsoft Clarity analytics, which records how visitors use the pages and can set cookies. See Cookies below.</li>
+          </ul>
+          <p>If this summary and the full text below differ, the full text applies.</p>
+        </section>
+
+        <section id="terms">
+          <h2>Terms of Use</h2>
+
+          <h3>1. Agreement</h3>
+          <p>
+            These terms cover the Murmie app for macOS ("the app") and murmie.com ("the website"). "We" and "us" mean the
+            developer of Murmie. By installing or using the app, you agree to these terms. If you do not agree, do not
+            install or use it.
+          </p>
+
+          <h3>2. Licence</h3>
+          <p>
+            Murmie is free. We give you a personal, non-exclusive, non-transferable licence to install and use the app on
+            Macs you own or control, for personal or work use. The app is proprietary software, not open source.
+          </p>
+          <p>You may not:</p>
+          <ul>
+            <li>sell, rent or lease the app, or distribute modified copies of it;</li>
+            <li>reverse-engineer, decompile or disassemble the app, except where the law allows it;</li>
+            <li>remove or change any copyright, trademark or licence notices.</li>
+          </ul>
+          <p>
+            The app includes open-source software and AI models, such as WhisperKit, FluidAudio, Google LiteRT-LM, Google
+            Gemma, NVIDIA Parakeet and Silero VAD. Each is covered by its own licence, which also applies to your use of
+            it. The full list is in the app.
+          </p>
+
+          <h3>3. Your responsibilities</h3>
+          <ul>
+            <li>
+              <strong>Consent.</strong> If you record or transcribe other people, for example in a meeting, you must get
+              any consent the law requires.
+            </li>
+            <li>
+              <strong>Check the output.</strong> Speech recognition and AI make mistakes. Check text before you send,
+              publish or rely on it.
+            </li>
+            <li><strong>Lawful use.</strong> Do not use Murmie for anything unlawful or harmful.</li>
+            <li>
+              <strong>No critical use.</strong> Do not use Murmie where an error could cause injury, death or serious loss,
+              such as medical, emergency or safety-critical work.
+            </li>
+          </ul>
+
+          <h3>4. Third-party AI services</h3>
+          <p>
+            You can connect Murmie to an AI service, such as OpenAI, Anthropic, Google Gemini, Groq, OpenRouter, Sarvam AI
+            or a custom endpoint, using your own API key. That service's terms, privacy policy and fees apply to what you
+            send it. We do not control these services and are not responsible for them.
+          </p>
+
+          <h3>5. Changes</h3>
+          <p>
+            We may change or stop the app or the website at any time. We may also update these terms. The date at the top
+            of this page shows the latest version. If you keep using Murmie after an update, the new terms apply.
+          </p>
+
+          <h3>6. Ending the licence</h3>
+          <p>
+            You can stop using Murmie at any time by deleting it. Your licence ends if you break these terms, and you must
+            then stop using the app and delete it.
+          </p>
+
+          <h3>7. Ownership</h3>
+          <p>
+            We or our licensors own the app, the Murmie name, the mascot and this website. These terms give you no rights to
+            them beyond the licence above.
+          </p>
+
+          <h3>8. No warranty</h3>
+          <p>
+            Murmie is provided "as is", without warranties of any kind, express or implied, to the extent the law allows.
+            That includes warranties of merchantability, fitness for a particular purpose, accuracy and non-infringement.
+          </p>
+
+          <h3>9. Limitation of liability</h3>
+          <p>
+            To the extent the law allows, we are not liable for indirect or consequential loss, for loss of data, profits
+            or business, or for loss caused by transcription errors or third-party services. Nothing in these terms
+            limits liability that the law does not allow us to limit.
+          </p>
+
+          <h3>10. General</h3>
+          <p>
+            If part of these terms cannot be enforced, the rest still applies. These terms, the privacy policy below and
+            the third-party licences in section 2 are the whole agreement between you and us about Murmie.
+          </p>
+        </section>
+
+        <section id="privacy">
+          <h2>Privacy Policy</h2>
+          <p>
+            This policy explains what data the Murmie app and this website handle. The app has no accounts, analytics,
+            telemetry or crash reporting. The website uses Microsoft Clarity for analytics (see "This website" below).
+          </p>
+
+          <h3>Data the app keeps on your Mac</h3>
+          <ul>
+            <li>
+              <strong>Audio.</strong> While you record, audio is written to a temporary file. The file is deleted when the
+              recording stops, and any leftover files are removed the next time the app starts. Audio is transcribed on
+              your Mac.
+            </li>
+            <li>
+              <strong>History.</strong> Your transcripts are kept in a local history. History is on by default. It keeps
+              up to 500 entries and deletes entries older than 2 weeks (you can choose 1 to 4 weeks). You can turn history off or
+              clear it in settings.
+            </li>
+            <li>
+              <strong>Meeting notes.</strong> Meeting transcripts and summaries are kept until you delete them. If you turn
+              on export, they are also saved to a folder you choose.
+            </li>
+            <li><strong>Settings.</strong> Stored in the standard macOS preferences file.</li>
+            <li><strong>API keys.</strong> Stored in your macOS Keychain.</li>
+            <li>
+              <strong>Clipboard.</strong> To paste text, the app briefly puts it on your clipboard, then restores what was
+              there. Ask AI answers are copied to your clipboard and stay there.
+            </li>
+          </ul>
+          <p>Murmie does not encrypt history or meeting notes itself. They may be included in your Mac's backups.</p>
+
+          <h3>Data that leaves your Mac</h3>
+          <ul>
+            <li>
+              <strong>Model downloads.</strong> Speech and AI models are downloaded from Hugging Face when you set them up.
+              If you choose Apple's speech engine, macOS downloads its language files from Apple. These providers see your
+              IP address and what you download. No audio or text is sent.
+            </li>
+            <li>
+              <strong>Update checks.</strong> About once a day, Murmie asks GitHub whether a newer version exists, and it
+              downloads updates from GitHub. GitHub sees your IP address and the version of Murmie that is asking. No audio or
+              text is sent. You can turn automatic checks off in Settings › About.
+            </li>
+            <li>
+              <strong>Feedback form.</strong> If you send feedback from Settings › About, the form opens in your browser and
+              what you type is stored with Google Forms. Please do not include personal or confidential information. We use it
+              only to fix problems and decide what to build.
+            </li>
+            <li>
+              <strong>AI services you connect.</strong> These are off by default. If you turn on AI correction, Ask AI or
+              meeting summaries with a cloud AI service or custom endpoint, the app sends that service:
+              <ul>
+                <li>AI correction: your transcribed text;</li>
+                <li>Ask AI: your spoken request as text, any text you have selected, and a screenshot of a window or screen if you pick one;</li>
+                <li>meeting summaries: the meeting transcript.</li>
+              </ul>
+              Audio is never sent. If you use an on-device model or an AI server on your own Mac, nothing leaves your Mac.
+            </li>
+          </ul>
+          <p>
+            These providers may process data outside your country, often in the United States. We receive no data from
+            the app, so we do not sell or share it.
+          </p>
+
+          <h3>Permissions</h3>
+          <ul>
+            <li><strong>Microphone:</strong> to record your voice.</li>
+            <li><strong>Speech Recognition:</strong> only if you choose Apple's speech engine.</li>
+            <li><strong>Accessibility:</strong> to insert text at your cursor and, for Ask AI, read selected text.</li>
+            <li><strong>Input Monitoring:</strong> to detect your shortcut, such as a double-tap of Right ⌘.</li>
+            <li><strong>Automation:</strong> to paste into apps such as Terminal.</li>
+            <li>
+              <strong>Screen and System Audio Recording:</strong> to capture system audio for meeting notes and the window you
+              pick for Ask AI.
+            </li>
+          </ul>
+          <p>You can turn off any permission in System Settings › Privacy &amp; Security.</p>
+
+          <h3>This website</h3>
+          <p>
+            The website is hosted on GitHub Pages, and downloads come from GitHub. GitHub processes your IP address to
+            serve the pages and downloads; see
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a>.
+            We use Microsoft Clarity to understand how visitors use the website. Clarity loads a script from clarity.ms and
+            records how you interact with the pages, such as clicks, scrolling and mouse movement, and can replay a visit as
+            a recording. Microsoft receives your IP address and browser details with these requests and processes the data
+            under the <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>.
+            We use no other analytics or third-party scripts and show no ads. Fonts are served from murmie.com.
+          </p>
+
+          <h3>Your choices</h3>
+          <p>
+            Everything the app stores is on your Mac, so you can view and delete it yourself. We hold no copy. Deleting the
+            app leaves its data behind. To remove the data Murmie created, quit the app, then also delete:
+          </p>
+          <ul>
+            <li><code>~/Library/Preferences/com.murmie.app.plist</code> (settings, history and meeting notes);</li>
+            <li>the <code>Murmie</code> and <code>FluidAudio</code> folders in <code>~/Library/Application Support</code>;</li>
+            <li>the Whisper models in <code>~/Documents/huggingface/models</code>, or the folder you chose in settings (other apps may share this folder);</li>
+            <li>the <code>com.murmie.app</code> items in Keychain Access;</li>
+            <li>any meeting notes you exported.</li>
+          </ul>
+          <p>If you are in the EU or UK, you can complain to your local data protection authority.</p>
+
+        </section>
+
+        <section id="cookies">
+          <h2>Cookies</h2>
+          <p>
+            murmie.com itself sets no cookies. If you use the theme toggle, your choice is saved in your browser's local
+            storage as <code>murmie-theme</code>. It is never sent to us or anyone else.
+          </p>
+          <p>Microsoft Clarity, our analytics provider, may set these cookies in your browser:</p>
+          <ul>
+            <li><code>_clck</code> and <code>_clsk</code>: a visitor ID, and a link between your page views in one visit.</li>
+            <li>
+              <code>CLID</code>, <code>MUID</code>, <code>SM</code>, <code>MR</code> and <code>ANONCHK</code>: set by
+              Microsoft to recognise your browser across its sites.
+            </li>
+          </ul>
+          <p>
+            Microsoft says Clarity sets no cookies for visitors in the European Economic Area, the UK and Switzerland until
+            it receives a consent signal. This website sends none. You can block Clarity with a content blocker or your
+            browser's tracking protection. Clarity does not respond to Do Not Track signals.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            Questions about these terms or your privacy? Send us a message with our
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUrZhSzuPhFYLApsgoAe5H9uoxGWTeSjjfvXB-pjX3Ll7KkA/viewform" target="_blank" rel="noopener noreferrer">contact form</a>.
+            It is hosted by Google Forms, so what you submit is stored with Google.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <span>© 2026 <a href="https://shuul.io/" target="_blank" rel="noopener">SHUUL</a></span>
+      <span aria-hidden="true">·</span>
+      <a href="/legal.html">Terms &amp; Privacy</a>
+    </footer>
+
+  </body>
+</html>

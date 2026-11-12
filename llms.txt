@@ -1,0 +1,29 @@
+# Murmie
+
+> **Just say it. Murmie types it.** Murmie is free, private, on-device voice dictation for macOS. Double-tap Right Command, speak, and your words are typed wherever your cursor is. Speech is transcribed on the Mac. The app has no accounts, servers, analytics or tracking.
+
+Made by SHUUL Technologies LLP.
+
+## Product notes
+
+- **Platform**: macOS 26 or later, Apple silicon only.
+- **Price**: free. Proprietary freeware; not open source.
+- **Transcription**: on-device. Speech engines include Google Gemma, WhisperKit, NVIDIA Parakeet and Apple's speech engine. Models download from Hugging Face on first setup.
+- **Privacy**: audio never leaves the Mac. Optional AI features (AI correction, Ask AI, meeting summaries) can use a cloud AI service with the user's own API key; they are off by default. The app checks GitHub for updates about once a day; this can be turned off in Settings. The website (murmie.com) uses Microsoft Clarity for visitor analytics.
+- **Hotkeys**: double-tap Right Command to start dictating, tap Right Command to finish and paste at the cursor, Esc to cancel, or hold Right Option for push-to-talk (optional).
+- **Install**: download the DMG from the home page, or run `curl -fsSL https://raw.githubusercontent.com/shuul-io/murmie-releases/main/install.sh | bash` in Terminal.
+
+## Pages
+
+- [Home](https://murmie.com/): Mascot, download options and hotkeys
+- [Terms, Privacy and Cookies](https://murmie.com/legal.html): Terms of use, privacy policy for the app and website, cookie policy
+
+## Company
+
+- **Entity**: SHUUL Technologies LLP
+- **Corporate domain**: [shuul.io](https://shuul.io/)
+
+## Related
+
+- [SHUUL Technologies](https://shuul.io/): Parent company
+- [Sitemap](https://murmie.com/sitemap.xml): All public URLs

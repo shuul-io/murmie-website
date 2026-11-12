@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Murmie: Private, on-device voice dictation for macOS</title>
+    <meta
+      name="description"
+      content="Murmie is private, on-device voice dictation for macOS. Double-tap Right ⌘, speak, and your words appear wherever you're typing."
+    />
+    <link rel="canonical" href="https://murmie.com/" />
+
+    <meta name="theme-color" content="#EFEFED" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0B0B0E" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Murmie" />
+    <meta property="og:title" content="Murmie: Private, on-device voice dictation for macOS" />
+    <meta
+      property="og:description"
+      content="Just say it. Murmie types it. Private, on-device voice dictation for macOS."
+    />
+    <meta property="og:url" content="https://murmie.com/" />
+    <meta property="og:image" content="https://murmie.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Murmie, the voice dictation mascot, next to the tagline “Just say it. Murmie types it.”" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Murmie: Private, on-device voice dictation for macOS" />
+    <meta
+      name="twitter:description"
+      content="Just say it. Murmie types it. Private, on-device voice dictation for macOS."
+    />
+    <meta name="twitter:image" content="https://murmie.com/og.png" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script>
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem('murmie-theme');
+        } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        var root = document.documentElement;
+        root.setAttribute('data-theme', theme);
+        var color = theme === 'dark' ? '#0B0B0E' : '#EFEFED';
+        var metas = document.querySelectorAll('meta[name="theme-color"]');
+        for (var i = 0; i < metas.length; i++) metas[i].setAttribute('content', color);
+        // Murmie is a Mac app: show the download panel only on a Mac. iPadOS also says
+        // "Macintosh", so a touch screen rules it out.
+        var ua = navigator.userAgent;
+        var uaPlatform = navigator.userAgentData && navigator.userAgentData.platform;
+        var mac = uaPlatform ? uaPlatform === 'macOS' : /Macintosh|Mac OS X/.test(ua);
+        if (mac && navigator.maxTouchPoints > 1) mac = false;
+        root.setAttribute('data-platform', mac ? 'mac' : 'other');
+      })();
+    </script>
+
+    <link
+      rel="preload"
+      href="/fonts/poppins-400-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/poppins-500-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="/mascot/poster.webp" as="image" type="image/webp" fetchpriority="high" />
+    <script type="module" crossorigin src="/assets/main-qaEdLv9h.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-CM0oKVHZ.css">
+  </head>
+  <body>
+    <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+      <symbol id="i-download" viewBox="0 0 16 16">
+        <path d="M8 2.5v7.25M4.75 6.75 8 10l3.25-3.25M3 13h10" />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 16 16">
+        <rect x="5.5" y="5.5" width="8" height="8" rx="2" />
+        <path d="M10.5 5.5v-1a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 16 16">
+        <path d="m3.5 8.5 3 3 6-7" />
+      </symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 16 16">
+        <path d="M5 11 11 5M6 4.5h5.5V10" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 16 16">
+        <circle cx="8" cy="8" r="2.75" />
+        <path
+          d="M8 1.5v1.25M8 13.25v1.25M1.5 8h1.25M13.25 8h1.25M3.4 3.4l.9.9M11.7 11.7l.9.9M12.6 3.4l-.9.9M4.3 11.7l-.9.9"
+        />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 16 16">
+        <path d="M13.5 9.25A5.75 5.75 0 0 1 6.75 2.5a5.75 5.75 0 1 0 6.75 6.75Z" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <button
+        class="btn btn-ghost theme-toggle"
+        type="button"
+        id="theme-toggle"
+        aria-label="Switch to dark theme"
+      >
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon" /></svg>
+      </button>
+    </header>
+
+    <main class="page" id="top">
+      <section class="hero">
+        <div class="stage" id="mascot-stage" aria-hidden="true">
+          <div class="stage-shadow"></div>
+          <img
+            class="stage-media"
+            src="/mascot/poster.webp"
+            width="480"
+            height="486"
+            alt=""
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+        <h1>Murmie</h1>
+        <p class="tagline">Just say it. Murmie types it.</p>
+        <p class="description">
+          Private, on-device voice dictation for macOS. <span class="nowrap">Double-tap</span> Right ⌘, speak, and your words
+          appear wherever you're typing.
+        </p>
+      </section>
+
+      <section class="panel" aria-labelledby="download-heading">
+        <h2 class="sr-only" id="download-heading">Download</h2>
+
+        <div class="row">
+          <span class="row-label">Download</span>
+          <span class="row-detail">Signed and notarized · Apple silicon · macOS 26 or later</span>
+          <a
+            class="btn btn-primary"
+            href="https://github.com/shuul-io/murmie-releases/releases/latest/download/Murmie.dmg"
+            aria-label="Download Murmie for macOS (signed and notarized)"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>
+          </a>
+        </div>
+
+        <div class="row">
+          <span class="row-label">Terminal</span>
+          <span class="row-detail">
+            <code class="cmd" title="curl -fsSL https://raw.githubusercontent.com/shuul-io/murmie-releases/main/install.sh | bash">curl -fsSL https://raw.githubusercontent.com/shuul-io/murmie-releases/main/install.sh | bash</code>
+          </span>
+          <button
+            class="btn btn-secondary"
+            type="button"
+            data-copy="curl -fsSL https://raw.githubusercontent.com/shuul-io/murmie-releases/main/install.sh | bash"
+            aria-label="Copy the install command"
+          >
+            <svg class="icon icon-copy" aria-hidden="true"><use href="#i-copy" /></svg>
+            <svg class="icon icon-check" aria-hidden="true"><use href="#i-check" /></svg>
+          </button>
+        </div>
+
+        <div class="row">
+          <span class="row-label">Homebrew</span>
+          <span class="row-detail">
+            <code>brew install --cask shuul-io/tap/murmie</code>
+          </span>
+          <button
+            class="btn btn-secondary"
+            type="button"
+            data-copy="brew install --cask shuul-io/tap/murmie"
+            aria-label="Copy Homebrew install command"
+          >
+            <svg class="icon icon-copy" aria-hidden="true"><use href="#i-copy" /></svg>
+            <svg class="icon icon-check" aria-hidden="true"><use href="#i-check" /></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- shown instead of the download panel when the visitor is not on a Mac -->
+      <section class="not-mac" aria-labelledby="not-mac-heading">
+        <h2 class="not-mac-title" id="not-mac-heading">Murmie only nests on Macs</h2>
+        <p class="not-mac-text">
+          Pop back on your Mac to bring Murmie home. She'll be waiting.
+          <span class="not-mac-req">Apple silicon · macOS 26 or later</span>
+        </p>
+      </section>
+
+      <section class="hotkeys" aria-labelledby="hotkeys-heading">
+        <h2 class="section-heading" id="hotkeys-heading">How to use it</h2>
+        <ul class="hotkey-list">
+          <li class="hotkey">
+            <span class="keys">
+              <span class="sr-only">Right Command, twice</span>
+              <kbd aria-hidden="true"><span class="sym">⌘</span><small>right</small></kbd>
+              <kbd aria-hidden="true"><span class="sym">⌘</span><small>right</small></kbd>
+            </span>
+            <span class="hotkey-text">Start dictating</span>
+          </li>
+          <li class="hotkey">
+            <span class="keys">
+              <span class="sr-only">Right Command, once</span>
+              <kbd aria-hidden="true"><span class="sym">⌘</span><small>right</small></kbd>
+            </span>
+            <span class="hotkey-text">Finish <span class="note">pastes at the cursor</span></span>
+          </li>
+          <li class="hotkey">
+            <span class="keys">
+              <span class="sr-only">Escape</span>
+              <kbd aria-hidden="true">esc</kbd>
+            </span>
+            <span class="hotkey-text">Cancel <span class="note">while recording</span></span>
+          </li>
+          <li class="hotkey">
+            <span class="keys">
+              <span class="sr-only">Hold Right Option</span>
+              <kbd aria-hidden="true"><span class="sym">⌥</span><small>right</small></kbd>
+              <span class="hold" aria-hidden="true">hold</span>
+            </span>
+            <span class="hotkey-text">Push-to-talk <span class="note">optional</span></span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 <a href="https://shuul.io/" target="_blank" rel="noopener">SHUUL</a></span>
+      <span aria-hidden="true">·</span>
+      <a href="/legal.html">Terms &amp; Privacy</a>
+    </footer>
+
+    <p class="sr-only" id="live" role="status" aria-live="polite"></p>
+
+  </body>
+</html>
